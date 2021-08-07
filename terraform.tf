@@ -4,7 +4,7 @@
     encrypt        = true
     bucket         = “my-terraform-state"
     key            = "s3_bucket/terraform.tfstate"
-    region         = "us-west-2"
+    region         = "us-east-1e"
     dynamodb_table = "terraform-locks"
     }
 }*/
@@ -26,7 +26,7 @@ resource "aws_s3_bucket" "s3bucket" {
   acl    = "private"
   
   tags = {
-    Name        = "My bucket"
+    Name        = "my_bucket"
     Environment = "Dev"
   }
 }
